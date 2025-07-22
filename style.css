@@ -1,0 +1,55 @@
+/* Reset + globals */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Algerian, sans-serif; color: #ed0505; }
+
+/* Header */
+header  {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px; background: #e3d8d6;
+}
+header nav a {
+  margin-left: 15px; text-decoration: none; color: #333;
+  font-weight: bold;
+}
+header nav a:hover { color: #d35400; }
+
+/* Hero */
+.hero {
+  background: url('cake4.jpg') center/cover no-repeat;
+  text-align: center; padding: 150px 0; color: #ea0505;
+}
+.hero .btn {
+  display: inline-block; margin-top: 20px;
+  padding: 10px 20px; background: #d35400; color: #6d2b2b;
+  text-decoration: none; font-weight: bold;
+}
+.hero .btn:hover { background: #a04000; }
+
+/* Gallery */
+.gallery { padding: 60px 20px; text-align: center; }
+.gallery-grid {
+  display: grid; gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.cake-card {
+  background: #e6c4a8; border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.cake-card img { width: 100%; height: auto; }
+.cake-card h3 { padding: 15px; }
+
+/* About + Contact */
+.about, .contact {
+  padding:20px; text-align: center;
+  background: #d8db9a;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer { text-align: center; padding: 20px; font-size: 0.9em; color: #777;
+ }
+@media (max-width: 600px) {
+  .hero { padding: 80px 20px; }
+  header nav { display: none; } /* or transform into hamburger menu */
+}
